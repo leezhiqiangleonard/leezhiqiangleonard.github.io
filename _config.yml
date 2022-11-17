@@ -1,6 +1,6 @@
 # Site
 title: Leonard Lee
-bio: "Rocket Space"
+bio: "First github profile page"
 description: "First github profile page"
 reading_time: true
 words_per_minute: 200
@@ -42,7 +42,7 @@ sass:
 #facebook:           username
 github-url: leezhiqiangleonard
 # stackoverflow: 123456/username   from a "http://stackoverflow.com/users/123456/username" link
-linkedin: https://www.linkedin.com/in/leonard-lee-8651bb134/
+linkedin: leonard-lee-8651bb134
 # xing: username
 # instagram: username
 #lastfm:            username

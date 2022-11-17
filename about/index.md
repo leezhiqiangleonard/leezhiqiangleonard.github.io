@@ -1,23 +1,24 @@
 ---
 layout: page
-title: About the Theme
+title: About Me
 tags: [about, Jekyll, theme, rocket, space]
 date: 2016-03-21
 comments: false
 ---
-    
+
 <center><a href="http://gurkanakdeniz.github.io/"><b>Rocket Space</b></a> is a jekyll theme.</center>
 
 ## Features
-* Responsive
-* Disqus integration
-* Syntax highlighting
-* Optional post image
-* Social icons
-* Page for sharing projects
-* Optional background image
-* Simple navigation menu
-* MathJax support
+
+- Responsive
+- Disqus integration
+- Syntax highlighting
+- Optional post image
+- Social icons
+- Page for sharing projects
+- Optional background image
+- Simple navigation menu
+- MathJax support
 
 ## Preview
 
@@ -32,5 +33,5 @@ See a [live version of Rocket Space](http://gurkanakdeniz.github.io/) hosted on 
 ## Getting Started
 
 To learn how to install and use this theme check out the [Setup Guide](http://gurkanakdeniz.github.io/rocket-space-theme/) for more information.
-      
+
 [Install Rocket Space](https://github.com/gurkanakdeniz/rocket-space){: .btn}

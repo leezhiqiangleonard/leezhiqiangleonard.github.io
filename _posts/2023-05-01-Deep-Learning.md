@@ -1,0 +1,31 @@
+---
+layout: post
+title: "Anaconda Guide (for myself)"
+date: 2023-04-01
+excerpt: "A list of commands that I would need, so that I can learn them properly"
+tags: [first guide, first attempt]
+comments: true
+---
+
+Alright, here are the list of commands (olr actually options for the conda commands) that I have picked up along the way that I would like to keep track of. The idea is that I am keeping track of all the progress in learning for conda commands here.
+
+## List of Commands
+
+For creating a new environment
+``` bash
+conda create --name [-n] myenv python=3.9 #Creating a new environment with python3.9 specified
+```
+``` bash
+conda create --name [-n] myenv --clone base #Cloning a new environment from another environment
+```
+``` bash
+conda create --name [-n] myenv --c conda-forge #Create environment based on packages from a particular channel (conda-forge)
+```
+``` bash
+conda create --name [-n] myenv --offline #Don't connect to the internet for download or installation of packages
+```
+``` bash
+conda [options...] --no-default-packages #This is for creating an environment without any default packages installed
+# Example:
+conda create -n myenv python=3.9 --no-default-packages
+```

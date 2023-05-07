@@ -11,6 +11,13 @@ Alright, here are the list of commands (olr actually options for the conda comma
 
 # Machine Learning Concepts
 
+## Terminologies
+x: Input vairable/features
+y: Output variable/target variables
+m: Number of training variables
+(x, y): Single training example
+(x_{i}, y_{i}): i-th training example
+
 ## Supervised Learning: Introduction
 Supervied Learning learns from data labeled with the "right answers".
 
@@ -18,6 +25,9 @@ Supervied Learning learns from data labeled with the "right answers".
 
 What is a regression task?
 Regression predicts a number of infinitely many possible output values (e.g real numbers).
+
+### Linear Regression
+Trainin
 
 ## Supervised Learning: Classification
 

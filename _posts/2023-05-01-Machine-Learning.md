@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Anaconda Guide (for myself)"
-date: 2023-04-01
-excerpt: "A list of commands that I would need, so that I can learn them properly"
-tags: [first guide, first attempt]
+title: "Machine Learning"
+date: 2023-05-01
+excerpt: "Machine Learning"
+tags: [Machine Learning]
 comments: true
 ---
 

@@ -27,3 +27,9 @@ Classification predicts a small finite limited set of categories (e.g 0,1,2).
 ## Unsupervised Learning: Introduction
 Unsupervised Learning learns from unlabeled data. (Ask the algorithm to fogurw out all by yourself what's interesting, or what patterns or structures might be in this data)
 
+Formal Definition: Data only comes with inputs x, but nkt output labels y. Algorithm has to find structure in the data.
+
+Examples of unsupervised learning: Clustering - group similar data points together, Anonaly detection - Find unusual data points, Dimensionality reductin - Compress data ising fewer numbers.
+
+## Unsupervised Learning: Clustering
+

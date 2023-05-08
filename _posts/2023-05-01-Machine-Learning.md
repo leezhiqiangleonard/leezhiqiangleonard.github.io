@@ -30,7 +30,7 @@ Regression predicts a number of infinitely many possible output values (e.g real
 Trainin
 
 ### Supervised Learning: Cost function
-Given input features x and output target variables y, we fit linear function model \$f_{W,b}(x)=Wx+b\$, where $W$ & $b$ are parameters (also commonly known as coefficients or weights) of the model.
+Given input features x and output target variables y, we fit linear function model $`f_{W,b}(x)=Wx+b`$, where $W$ & $b$ are parameters (also commonly known as coefficients or weights) of the model.
 
 ## Supervised Learning: Classification
 

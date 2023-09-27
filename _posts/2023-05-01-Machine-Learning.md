@@ -12,11 +12,11 @@ Alright, here are the list of commands (olr actually options for the conda comma
 # Machine Learning Concepts
 
 ## Terminologies
-x: Input vairable/features
-y: Output variable/target variables
-m: Number of training variables
-(x, y): Single training example
-(x_{i}, y_{i}): i-th training example
+* $x$: Input vairable/features
+* $y$: Output variable/target variables
+* $m$: Number of training variables
+* ($x$, $y$): Single training example
+* ($x_{i}$, $y_{i}$): $i$-th training example
 
 ## Supervised Learning: Introduction
 Supervied Learning learns from data labeled with the "right answers".

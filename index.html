@@ -2,37 +2,47 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
     <title>Leonard's Portfolio</title>
+    <meta name="description" content="Leonard's Portfolio" />
   </head>
 
   <body>
-    <header class="header">
-      <a href="#">
-        <p>Placeholder for Logo</p>
-      </a>
-      <nav class="navbar">
-        <ul class="navbar-list">
-          <li><a class="navbar-link" href="#">Home</a></li>
-          <li><a class="navbar-link" href="#">About Me</a></li>
-          <li><a class="navbar-link" href="#">Education</a></li>
-          <li><a class="navbar-link" href="#">Work Experiences</a></li>
-          <li><a class="navbar-link" href="#">Skillsets</a></li>
-        </ul>
-      </nav>
-    </header>
+    <div class="body-layout">
+      <header class="hero">
+        <div class="hero__text-box">
+          <h1 class="heading-primary">
+            <span class="heading-primary--main">Hi, I'm Leonard</span>
+            <span class="heading-primary--sub"
+              >Designer, Developer, Dreamer</span
+            >
+          </h1>
+        </div>
+      </header>
 
-    <main>
-      <p>Landing Page Body</p>
-    </main>
-
-    <footer>
-      <p>Landing Page Footer</p>
-    </footer>
+      <main>
+        <section class="section-about"></section>
+        <section class="section-work"></section>
+        <section class="section-projects"></section>
+        <section class="section-education"></section>
+        <section class="section-skills"></section>
+        <section class="section-contact"></section>
+        <footer>
+          <p>Landing Page Footer</p>
+        </footer>
+      </main>
+    </div>
   </body>
 </html>

@@ -1,0 +1,9 @@
+.hero {
+  grid-area: hero;
+  height: calc(100vh - 4rem);
+  width: 100%;
+
+  &__text-box {
+    padding: 20rem;
+  }
+}

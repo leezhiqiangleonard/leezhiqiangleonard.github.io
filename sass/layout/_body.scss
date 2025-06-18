@@ -1,0 +1,9 @@
+.body-layout {
+  margin: 2rem 0;
+  padding: 1rem;
+  display: grid;
+  grid-template-areas: "hero body";
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}

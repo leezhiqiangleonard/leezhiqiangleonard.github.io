@@ -1,0 +1,19 @@
+@use "../abstracts" as abstracts;
+
+.icon-default {
+  font-size: 3.2rem;
+  color: abstracts.$color-grey-light-3;
+  cursor: pointer;
+}
+
+.icon-small {
+  font-size: 2.8rem;
+  color: abstracts.$color-grey-light-3;
+  cursor: pointer;
+}
+
+.icon-display {
+  padding: 0 2rem;
+  display: flex;
+  gap: 2.4rem;
+}

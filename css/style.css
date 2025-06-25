@@ -45,7 +45,6 @@ html {
 body {
   box-sizing: border-box;
   height: 100vh;
-  width: 100vw;
   background-color: #0a172a;
 }
 @media only screen and (max-width: 56.25em) {
@@ -75,10 +74,11 @@ body {
   backface-visibility: hidden;
 }
 .heading-primary--main {
-  display: block;
-  font-size: 4.8rem;
+  display: inline-block;
+  font-size: 4rem;
   font-weight: 700;
-  letter-spacing: 0.1rem;
+  line-height: 1;
+  letter-spacing: 0.02em;
   animation-name: moveInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;
@@ -95,9 +95,8 @@ body {
 }
 .heading-primary--sub {
   display: block;
-  font-size: 1.8rem;
-  font-weight: 600;
-  letter-spacing: 0.2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
   animation: moveInRight 1s ease-out;
 }
 @media only screen and (max-width: 37.5em) {
@@ -133,16 +132,16 @@ body {
 }
 
 .heading-tertiary {
-  font-size: 1.6rem;
-  font-weight: 500;
+  font-size: 1.4rem;
+  font-weight: 400;
   color: #94a3b8;
 }
 
 .paragraph {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 .paragraph:not(:last-child) {
-  margin-bottom: 3rem;
+  margin-bottom: 2.4rem;
 }
 
 .short-body {
@@ -161,8 +160,12 @@ body {
   margin-bottom: 4rem !important;
 }
 
-.u-margin-bottom-big {
+.u-margin-bottom-large {
   margin-bottom: 8rem !important;
+}
+
+.u-margin-bottom-xlarge {
+  margin-bottom: 12rem !important;
 }
 
 .u-margin-top-big {
@@ -171,6 +174,18 @@ body {
 
 .u-margin-top-huge {
   margin-top: 10rem !important;
+}
+
+.u-width-65 {
+  width: 65% !important;
+}
+
+.u-width-75 {
+  width: 75% !important;
+}
+
+.u-hidden {
+  display: none;
 }
 
 @keyframes moveInLeft {
@@ -210,13 +225,13 @@ body {
   }
 }
 .icon-default {
-  font-size: 3.2rem;
+  font-size: 2.4rem;
   color: #94a3b8;
   cursor: pointer;
 }
 
 .icon-small {
-  font-size: 2.8rem;
+  font-size: 2rem;
   color: #94a3b8;
   cursor: pointer;
 }
@@ -228,27 +243,136 @@ body {
 }
 
 .body-layout {
-  margin: 0 9.6rem;
-  padding: 0 4.8rem;
+  margin: 0 24rem;
+  padding: 0 3.2rem;
+  position: relative;
   display: grid;
   grid-template-areas: "hero body";
   grid-template-rows: 1fr;
   grid-template-columns: 4fr 5fr;
   gap: 1rem;
-  height: 100%;
 }
 
 .header {
   grid-area: hero;
+  top: 0;
+  position: sticky;
   padding: 8rem 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+  max-height: 100vh;
   width: 100%;
 }
 .header__hero-box {
-  padding: 2rem;
+  padding: 0 2rem;
+}
+
+.navigation {
+  background-color: transparent;
+}
+.navigation__nav {
+  width: 100%;
+}
+.navigation__list {
+  height: max-content;
+  width: max-content;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.navigation__item {
+  height: inherit;
+  width: inherit;
+  padding: 0.8rem 0;
+}
+.navigation__link:link, .navigation__link:visited {
+  height: inherit;
+  display: flex;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #94a3b8;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.navigation__link:link span, .navigation__link:visited span {
+  margin: auto 0;
+  display: inline-block;
+  height: 0.1rem;
+  width: 2.4rem;
+  background-color: #94a3b8;
+  transition: ease-in-out width 0.2s;
+}
+.navigation__link:hover, .navigation__link:active {
+  color: #55c57a;
+}
+.navigation__link:hover span, .navigation__link:active span {
+  background-color: #55c57a;
+  width: 4.8rem;
+  transition: ease-in-out width 0.2s;
+}
+
+.main {
+  grid-area: body;
+  padding: 8rem 0;
+  height: 100%;
+  width: 100%;
+}
+
+.list {
+  list-style: none;
+}
+
+.card {
+  margin-bottom: 2.4rem;
+}
+.card__layout {
+  display: grid;
+  grid-template-areas: "header header body body body body body body";
+  grid-template-columns: repeat(8, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+.card__header {
+  grid-area: header;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.card__info {
+  grid-area: body;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+.card__heading {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #fff;
+}
+.section-about {
+  height: max-content;
+  color: #94a3b8;
+}
+
+.section-experience {
+  height: max-content;
+  color: #94a3b8;
+}
+
+.section-projects {
+  height: 20rem;
+}
+
+.section-education {
+  height: 20rem;
+}
+
+.section-skills {
+  height: 20rem;
+}
+
+.section-contact {
+  height: 20rem;
 }
 
 /*# sourceMappingURL=style.css.map */

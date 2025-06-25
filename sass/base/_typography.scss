@@ -13,10 +13,11 @@ body {
   backface-visibility: hidden;
 
   &--main {
-    display: block;
-    font-size: 4.8rem;
+    display: inline-block;
+    font-size: 4rem;
     font-weight: 700;
-    letter-spacing: 0.1rem;
+    line-height: 1;
+    letter-spacing: 0.02em;
 
     animation-name: moveInLeft;
     animation-duration: 1s;
@@ -34,9 +35,9 @@ body {
 
   &--sub {
     display: block;
-    font-size: 1.8rem;
-    font-weight: 600;
-    letter-spacing: 0.2rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    // letter-spacing: 0.2rem;
     animation: moveInRight 1s ease-out;
 
     @include abstracts.respond(phone) {
@@ -75,17 +76,16 @@ body {
 }
 
 .heading-tertiary {
-  font-size: abstracts.$default-font-size;
-  font-weight: 500;
-  //   letter-spacing: 0.1rem;
+  font-size: abstracts.$short-font-size;
+  font-weight: 400;
   color: abstracts.$color-grey-light-3;
 }
 
 .paragraph {
-  font-size: abstracts.$default-font-size;
+  font-size: abstracts.$short-font-size;
 
   &:not(:last-child) {
-    margin-bottom: 3rem;
+    margin-bottom: 2.4rem;
   }
 }
 

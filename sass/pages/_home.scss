@@ -1,0 +1,27 @@
+@use "../abstracts" as abstracts;
+
+.section-about {
+  height: max-content;
+  color: abstracts.$color-grey-light-3;
+}
+
+.section-experience {
+  height: max-content;
+  color: abstracts.$color-grey-light-3;
+}
+
+.section-projects {
+  height: 20rem;
+}
+
+.section-education {
+  height: 20rem;
+}
+
+.section-skills {
+  height: 20rem;
+}
+
+.section-contact {
+  height: 20rem;
+}

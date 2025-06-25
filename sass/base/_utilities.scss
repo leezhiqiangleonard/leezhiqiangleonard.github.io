@@ -8,8 +8,11 @@
 .u-margin-bottom-medium {
   margin-bottom: 4rem !important;
 }
-.u-margin-bottom-big {
+.u-margin-bottom-large {
   margin-bottom: 8rem !important;
+}
+.u-margin-bottom-xlarge {
+  margin-bottom: 12rem !important;
 }
 
 .u-margin-top-big {
@@ -17,4 +20,16 @@
 }
 .u-margin-top-huge {
   margin-top: 10rem !important;
+}
+
+.u-width-65 {
+  width: 65% !important;
+}
+
+.u-width-75 {
+  width: 75% !important;
+}
+
+.u-hidden {
+  display: none;
 }

@@ -242,17 +242,6 @@ body {
   gap: 2.4rem;
 }
 
-.body-layout {
-  margin: 0 24rem;
-  padding: 0 3.2rem;
-  position: relative;
-  display: grid;
-  grid-template-areas: "hero body";
-  grid-template-rows: 1fr;
-  grid-template-columns: 4fr 5fr;
-  gap: 1rem;
-}
-
 .header {
   grid-area: hero;
   top: 0;
@@ -313,11 +302,40 @@ body {
   transition: ease-in-out width 0.2s;
 }
 
+.body-layout {
+  margin: 0 24rem;
+  padding: 0 3.2rem;
+  position: relative;
+  display: grid;
+  grid-template-areas: "hero body";
+  grid-template-rows: 1fr;
+  grid-template-columns: 4fr 5fr;
+  gap: 1rem;
+}
+
 .main {
   grid-area: body;
   padding: 8rem 0;
   height: 100%;
   width: 100%;
+}
+
+.footer {
+  opacity: 0.8;
+  padding: 0 2.4rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #94a3b8;
+}
+.footer__description {
+  width: 80%;
+}
+.footer__link:link, .footer__link:visited {
+  text-decoration: none;
+  color: #eee;
+}
+.footer__link:hover, .footer__link:active {
+  color: #5eead4;
 }
 
 .list {
@@ -332,6 +350,10 @@ body {
   color: #fff;
   transition: opacity 0.2s ease, background-color 0.2s, color 0.2s;
   cursor: pointer;
+}
+.card__link:link, .card__link:visited {
+  text-decoration: none;
+  color: inherit;
 }
 .card__layout {
   display: grid;
@@ -364,14 +386,14 @@ body {
   margin-top: 0.6rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 .card__tag {
   padding: 0.2rem 0.8rem;
   border: 1px solid transparent;
   border-radius: 5rem;
   background-color: rgba(45, 212, 191, 0.1);
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
   color: #5eead4;
 }
@@ -396,7 +418,8 @@ body {
 }
 
 .section-projects {
-  height: 20rem;
+  height: max-content;
+  color: #94a3b8;
 }
 
 .section-education {

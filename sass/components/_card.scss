@@ -9,6 +9,14 @@
   transition: opacity 0.2s ease, background-color 0.2s, color 0.2s;
   cursor: pointer;
 
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
   &__layout {
     display: grid;
     grid-template-areas: "header header body body body body body body";
@@ -45,7 +53,7 @@
     margin-top: 0.6rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
   }
 
   &__tag {
@@ -53,7 +61,7 @@
     border: 1px solid transparent;
     border-radius: 5rem;
     background-color: rgba(45, 212, 191, 0.1);
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 500;
     color: #5eead4;
   }

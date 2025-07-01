@@ -2,6 +2,12 @@
 
 .card {
   margin-bottom: 2.4rem;
+  padding: 1.2rem 2.4rem;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  color: abstracts.$color-white;
+  transition: opacity 0.2s ease, background-color 0.2s, color 0.2s;
+  cursor: pointer;
 
   &__layout {
     display: grid;
@@ -15,6 +21,7 @@
     grid-area: header;
     font-size: 1.2rem;
     font-weight: 500;
+    color: abstracts.$color-grey-light-3;
   }
 
   &__info {
@@ -26,15 +33,37 @@
   &__heading {
     font-size: 1.4rem;
     font-weight: 500;
-    color: abstracts.$color-white;
   }
 
   &__description {
+    font-size: 1.2rem;
+    color: abstracts.$color-grey-light-3;
   }
 
   &__tags {
+    list-style: none;
+    margin-top: 0.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
   &__tag {
+    padding: 0.2rem 0.8rem;
+    border: 1px solid transparent;
+    border-radius: 5rem;
+    background-color: rgba(45, 212, 191, 0.1);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #5eead4;
   }
+
+  &:hover {
+    background-color: rgba(160, 180, 209, 0.1);
+    color: #5eead4;
+  }
+}
+
+.card.de-selected {
+  opacity: 0.4;
 }

@@ -326,6 +326,12 @@ body {
 
 .card {
   margin-bottom: 2.4rem;
+  padding: 1.2rem 2.4rem;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  color: #fff;
+  transition: opacity 0.2s ease, background-color 0.2s, color 0.2s;
+  cursor: pointer;
 }
 .card__layout {
   display: grid;
@@ -338,6 +344,7 @@ body {
   grid-area: header;
   font-size: 1.2rem;
   font-weight: 500;
+  color: #94a3b8;
 }
 .card__info {
   grid-area: body;
@@ -347,9 +354,38 @@ body {
 .card__heading {
   font-size: 1.4rem;
   font-weight: 500;
-  color: #fff;
 }
+.card__description {
+  font-size: 1.2rem;
+  color: #94a3b8;
+}
+.card__tags {
+  list-style: none;
+  margin-top: 0.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.card__tag {
+  padding: 0.2rem 0.8rem;
+  border: 1px solid transparent;
+  border-radius: 5rem;
+  background-color: rgba(45, 212, 191, 0.1);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #5eead4;
+}
+.card:hover {
+  background-color: rgba(160, 180, 209, 0.1);
+  color: #5eead4;
+}
+
+.card.de-selected {
+  opacity: 0.4;
+}
+
 .section-about {
+  padding: 0 2.4rem;
   height: max-content;
   color: #94a3b8;
 }
@@ -364,7 +400,8 @@ body {
 }
 
 .section-education {
-  height: 20rem;
+  height: max-content;
+  color: #94a3b8;
 }
 
 .section-skills {

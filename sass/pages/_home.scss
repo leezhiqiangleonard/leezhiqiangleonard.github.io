@@ -1,6 +1,7 @@
 @use "../abstracts" as abstracts;
 
 .section-about {
+  padding: 0 2.4rem;
   height: max-content;
   color: abstracts.$color-grey-light-3;
 }
@@ -15,7 +16,8 @@
 }
 
 .section-education {
-  height: 20rem;
+  height: max-content;
+  color: abstracts.$color-grey-light-3;
 }
 
 .section-skills {

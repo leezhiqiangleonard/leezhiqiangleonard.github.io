@@ -1,7 +1,7 @@
 @use "../abstracts" as abstracts;
 
 .section-about {
-  padding: 0 2.4rem;
+  padding: 0 2rem;
   height: max-content;
   color: abstracts.$color-grey-light-3;
 }
@@ -26,5 +26,7 @@
 }
 
 .section-contact {
-  height: 20rem;
+  padding: 0 2rem;
+  height: max-content;
+  color: abstracts.$color-grey-light-3;
 }

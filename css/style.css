@@ -77,12 +77,6 @@ body {
       animation-iteration-count: 3;
       */
 }
-@media only screen and (max-width: 37.5em) {
-  .heading-primary--main {
-    letter-spacing: 1rem;
-    font-family: 5rem;
-  }
-}
 .heading-primary--sub {
   display: block;
   font-size: 1.6rem;
@@ -92,11 +86,6 @@ body {
 @media only screen and (max-width: 63.9em) {
   .heading-primary--sub {
     font-size: 1.8rem;
-  }
-}
-@media only screen and (max-width: 37.5em) {
-  .heading-primary--sub {
-    letter-spacing: 0.5rem;
   }
 }
 
@@ -458,6 +447,15 @@ body {
   border-radius: 4px;
   background-color: rgba(45, 212, 191, 0.1);
 }
+@media only screen and (max-width: 37.5em) {
+  .form {
+    padding: 1.6rem;
+    display: grid;
+    grid-template-rows: auto 1fr 1fr 1fr 3fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "name" "email" "subject" "message" "button";
+  }
+}
 .form__header {
   grid-area: header;
   padding: 0.4rem 0rem;
@@ -474,12 +472,22 @@ body {
   display: flex;
   flex-direction: column;
 }
+@media only screen and (max-width: 37.5em) {
+  .form__name {
+    margin: 0;
+  }
+}
 .form__email {
   grid-area: email;
   margin-bottom: 1rem;
   margin-left: 0.5rem;
   display: flex;
   flex-direction: column;
+}
+@media only screen and (max-width: 37.5em) {
+  .form__email {
+    margin: 0;
+  }
 }
 .form__subject {
   grid-area: subject;

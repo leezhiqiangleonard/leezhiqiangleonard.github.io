@@ -17,6 +17,12 @@
   display: flex;
   gap: 2.4rem;
 
+  @include abstracts.respond(tab-land) {
+    padding: 0;
+    display: flex;
+    gap: 2.4rem;
+  }
+
   &__link {
     &:link,
     &:visited {

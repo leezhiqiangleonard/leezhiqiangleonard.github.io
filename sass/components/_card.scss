@@ -9,6 +9,20 @@
   transition: opacity 0.2s ease, background-color 0.2s, color 0.2s;
   cursor: pointer;
 
+  &:hover {
+    background-color: rgba(160, 180, 209, 0.1);
+    color: #5eead4;
+  }
+
+  @include abstracts.respond(tab-land) {
+    padding: 0;
+
+    &:hover {
+      background-color: transparent;
+      color: #5eead4;
+    }
+  }
+
   &__link {
     &:link,
     &:visited {
@@ -72,11 +86,6 @@
     border: 1.4px solid abstracts.$color-grey-light-2;
     border-radius: 7px;
     object-fit: cover;
-  }
-
-  &:hover {
-    background-color: rgba(160, 180, 209, 0.1);
-    color: #5eead4;
   }
 }
 

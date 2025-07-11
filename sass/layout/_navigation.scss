@@ -3,6 +3,10 @@
 .navigation {
   background-color: transparent;
 
+  @include abstracts.respond(tab-land) {
+    display: none;
+  }
+
   &__nav {
     width: 100%;
   }

@@ -4,6 +4,10 @@
   padding: 0 2rem;
   height: max-content;
   color: abstracts.$color-grey-light-3;
+
+  @include abstracts.respond(tab-land) {
+    padding: 0;
+  }
 }
 
 .section-experience {
@@ -29,4 +33,16 @@
   padding: 0 2rem;
   height: max-content;
   color: abstracts.$color-grey-light-3;
+
+  @include abstracts.respond(tab-land) {
+    padding: 0;
+  }
+}
+
+.section__header {
+  display: none;
+
+  @include abstracts.respond(tab-land) {
+    display: block;
+  }
 }

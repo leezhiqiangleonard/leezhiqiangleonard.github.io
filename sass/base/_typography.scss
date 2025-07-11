@@ -14,7 +14,7 @@ body {
 
   &--main {
     display: inline-block;
-    font-size: 4rem;
+    font-size: 4.2rem;
     font-weight: 700;
     line-height: 1;
     letter-spacing: 0.02em;
@@ -40,6 +40,10 @@ body {
     // letter-spacing: 0.2rem;
     animation: moveInRight 1s ease-out;
 
+    @include abstracts.respond(tab-land) {
+      font-size: 1.8rem;
+    }
+
     @include abstracts.respond(phone) {
       letter-spacing: 0.5rem;
     }
@@ -47,38 +51,21 @@ body {
 }
 
 .heading-secondary {
-  font-size: 3.5rem;
-  text-transform: uppercase;
-  font-weight: 700;
   display: inline-block;
-  background-image: linear-gradient(
-    to right,
-    abstracts.$color-primary-light,
-    abstracts.$color-primary-dark
-  );
-  -webkit-background-clip: text;
-  color: transparent;
-  letter-spacing: 0.2rem;
-  transition: all 0.2s;
-
-  @include abstracts.respond(tab-port) {
-    font-size: 3rem;
-  }
-
-  @include abstracts.respond(phone) {
-    font-size: 2.5rem;
-  }
-
-  &:hover {
-    transform: skewY(2deg) skewX(15deg) scale(1.1);
-    text-shadow: 0.5rem 1rem 2rem rgba(abstracts.$color-black, 0.2);
-  }
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.03em;
 }
 
 .heading-tertiary {
   font-size: abstracts.$short-font-size;
   font-weight: 400;
   color: abstracts.$color-grey-light-3;
+
+  @include abstracts.respond(tab-land) {
+    font-size: 1.6rem;
+  }
 }
 
 .paragraph {

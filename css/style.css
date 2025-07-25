@@ -434,11 +434,39 @@ body {
     width: 100%;
   }
 }
+.card__layout-image {
+  display: grid;
+  grid-template-areas: "header header body body body body body body";
+  grid-template-columns: repeat(8, 1fr);
+  gap: 1.6rem;
+  width: 100%;
+}
+@media only screen and (max-width: 37.5em) {
+  .card__layout-image {
+    display: grid;
+    grid-template-areas: "body" "header";
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    width: 100%;
+  }
+}
 .card__header {
   grid-area: header;
   font-size: 1.4rem;
   font-weight: 500;
   color: #94a3b8;
+}
+.card__header-image {
+  grid-area: header;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #94a3b8;
+}
+@media only screen and (max-width: 37.5em) {
+  .card__header-image {
+    width: 16rem;
+  }
 }
 .card__info {
   grid-area: body;
@@ -473,7 +501,7 @@ body {
   height: 8rem;
   width: 100%;
   border: 1.4px solid #eee;
-  border-radius: 7px;
+  border-radius: 5px;
   object-fit: cover;
 }
 

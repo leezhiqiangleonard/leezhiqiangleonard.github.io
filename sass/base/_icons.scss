@@ -1,0 +1,38 @@
+@use "../abstracts" as abstracts;
+
+.icon-default {
+  font-size: 2.4rem;
+  color: abstracts.$color-grey-light-3;
+  cursor: pointer;
+}
+
+.icon-small {
+  font-size: 2rem;
+  color: abstracts.$color-grey-light-3;
+  cursor: pointer;
+}
+
+.icon-display {
+  padding: 0 2rem;
+  display: flex;
+  gap: 2.4rem;
+
+  @include abstracts.respond(tab-land) {
+    padding: 0;
+    display: flex;
+    gap: 2.4rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:active {
+      color: abstracts.$color-primary;
+    }
+  }
+}

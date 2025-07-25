@@ -1,0 +1,42 @@
+@use "../abstracts" as abstracts;
+
+.body-layout {
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  position: relative;
+  display: grid;
+  grid-template-areas: "hero body";
+  grid-template-rows: 1fr;
+  grid-template-columns: 4fr 5fr;
+  gap: 1rem;
+
+  max-width: 128rem;
+
+  @include abstracts.respond(tab-land) {
+    padding: 4.8rem;
+    position: relative;
+    display: grid;
+    grid-template-areas:
+      "hero"
+      "body";
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+  }
+
+  @include abstracts.respond(tab-port) {
+    padding: 4.2rem;
+    padding-top: 4.8rem;
+  }
+
+  @include abstracts.respond(phone-land) {
+    padding: 2.8rem;
+    padding-top: 4.8rem;
+    padding-bottom: 0rem;
+  }
+
+  @include abstracts.respond(phone) {
+    padding: 2.4rem;
+    padding-top: 4.8rem;
+    padding-bottom: 0rem;
+  }
+}

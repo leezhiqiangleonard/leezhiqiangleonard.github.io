@@ -1,0 +1,135 @@
+@use "../abstracts" as abstracts;
+
+.card {
+  margin-bottom: 2.4rem;
+  padding: 1.4rem 2rem;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  color: abstracts.$color-white;
+  transition: opacity 0.2s ease, background-color 0.2s, color 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(160, 180, 209, 0.1);
+    color: #5eead4;
+  }
+
+  @include abstracts.respond(tab-land) {
+    padding: 0;
+
+    &:hover {
+      background-color: transparent;
+      color: #5eead4;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  &__layout {
+    display: grid;
+    grid-template-areas: "header header body body body body body body";
+    grid-template-columns: repeat(8, 1fr);
+    gap: 1.6rem;
+    width: 100%;
+
+    @include abstracts.respond(phone-land) {
+      display: grid;
+      grid-template-areas:
+        "header"
+        "body";
+      grid-template-rows: auto 1fr;
+      grid-template-columns: 1fr;
+      gap: 0.4rem;
+      width: 100%;
+    }
+  }
+
+  &__layout-image {
+    display: grid;
+    grid-template-areas: "header header body body body body body body";
+    grid-template-columns: repeat(8, 1fr);
+    gap: 1.6rem;
+    width: 100%;
+
+    @include abstracts.respond(phone-land) {
+      display: grid;
+      grid-template-areas:
+        "body"
+        "header";
+      grid-template-rows: 1fr auto;
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+      width: 100%;
+    }
+  }
+
+  &__header {
+    grid-area: header;
+    font-size: abstracts.$short-font-size;
+    font-weight: 500;
+    color: abstracts.$color-grey-light-3;
+  }
+
+  &__header-image {
+    grid-area: header;
+    font-size: abstracts.$short-font-size;
+    font-weight: 500;
+    color: abstracts.$color-grey-light-3;
+
+    @include abstracts.respond(phone-land) {
+      width: 16rem;
+    }
+  }
+
+  &__info {
+    grid-area: body;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  &__heading {
+    font-size: abstracts.$short-font-size;
+    font-weight: 500;
+  }
+
+  &__description {
+    font-size: abstracts.$short-font-size;
+    color: abstracts.$color-grey-light-3;
+  }
+
+  &__tags {
+    list-style: none;
+    margin-top: 0.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__tag {
+    padding: 0.2rem 0.8rem;
+    border: 1px solid transparent;
+    border-radius: 5rem;
+    background-color: rgba(45, 212, 191, 0.1);
+    font-size: 1rem;
+    font-weight: 500;
+    color: #5eead4;
+  }
+
+  &__image {
+    height: 8rem;
+    width: 100%;
+    border: 1.4px solid abstracts.$color-grey-light-2;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+}
+
+.card.de-selected {
+  opacity: 0.4;
+}

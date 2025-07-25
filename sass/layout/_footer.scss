@@ -1,0 +1,45 @@
+@use "../abstracts" as abstracts;
+
+.footer {
+  opacity: 0.8;
+  padding: 0 2.4rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: abstracts.$color-grey-light-3;
+
+  @include abstracts.respond(tab-land) {
+    padding: 0rem;
+  }
+
+  @include abstracts.respond(tab-port) {
+  }
+
+  @include abstracts.respond(phone) {
+  }
+
+  &__description {
+    width: 80%;
+
+    @include abstracts.respond(tab-land) {
+      width: 65%;
+    }
+
+    @include abstracts.respond(phone) {
+      width: 100%;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: abstracts.$color-grey-light-2;
+    }
+
+    &:hover,
+    &:active {
+      color: #5eead4;
+    }
+  }
+}

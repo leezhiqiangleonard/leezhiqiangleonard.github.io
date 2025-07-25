@@ -1,0 +1,82 @@
+@use "../abstracts";
+
+body {
+  @include abstracts.fonts-default;
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  color: abstracts.$default-font-color;
+}
+
+.heading-primary {
+  color: abstracts.$color-white;
+
+  backface-visibility: hidden;
+
+  &--main {
+    display: inline-block;
+    font-size: 4.2rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.02em;
+
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    // @include abstracts.respond(phone) {
+    //   letter-spacing: 1rem;
+    //   font-family: 5rem;
+    // }
+    /*
+        animation-delay: 3s;
+        animation-iteration-count: 3;
+        */
+  }
+
+  &--sub {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 400;
+    // letter-spacing: 0.2rem;
+    animation: moveInRight 1s ease-out;
+
+    @include abstracts.respond(tab-land) {
+      font-size: 1.8rem;
+    }
+
+    // @include abstracts.respond(phone) {
+    //   letter-spacing: 0.5rem;
+    // }
+  }
+}
+
+.heading-secondary {
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.03em;
+}
+
+.heading-tertiary {
+  width: 20em;
+  font-size: abstracts.$short-font-size;
+  font-weight: 400;
+  color: abstracts.$color-grey-light-3;
+
+  @include abstracts.respond(tab-land) {
+    font-size: 1.6rem;
+  }
+}
+
+.paragraph {
+  font-size: 1.5rem;
+
+  &:not(:last-child) {
+    margin-bottom: 2.4rem;
+  }
+}
+
+.short-body {
+  font-size: 1.4rem;
+}

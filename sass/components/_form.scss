@@ -1,0 +1,173 @@
+@use "../abstracts/" as abstracts;
+
+.form {
+  padding: 1.6rem;
+  display: grid;
+  grid-template-rows: auto 1fr 1fr 3.2fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "header header"
+    "name email"
+    "subject subject"
+    "message message"
+    "button button";
+
+  border-radius: 4px;
+  background-color: rgba(45, 212, 191, 0.1);
+
+  @include abstracts.respond(tab-land) {
+    width: 65em;
+  }
+
+  @include abstracts.respond(tab-port) {
+    width: 100%;
+  }
+
+  @include abstracts.respond(phone) {
+    padding: 1.6rem;
+    display: grid;
+    grid-template-rows: auto 1fr 1fr 1fr 3fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "name"
+      "email"
+      "subject"
+      "message"
+      "button";
+  }
+
+  &__header {
+    grid-area: header;
+    padding: 0.4rem 0rem;
+  }
+
+  &__heading {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #5eead4;
+  }
+
+  &__name {
+    grid-area: name;
+    margin-bottom: 1rem;
+    margin-right: 0.5rem;
+    display: flex;
+    flex-direction: column;
+
+    @include abstracts.respond(phone) {
+      margin: 0;
+    }
+  }
+
+  &__email {
+    grid-area: email;
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+    display: flex;
+    flex-direction: column;
+
+    @include abstracts.respond(phone) {
+      margin: 0;
+    }
+  }
+
+  &__subject {
+    grid-area: subject;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__message {
+    grid-area: message;
+    margin-bottom: 1.6rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    margin-bottom: 0.4rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: abstracts.$color-white;
+  }
+
+  &__input {
+    padding: 0.6rem 1.2rem;
+    border: 1px solid #5eead4;
+    border-radius: 4px;
+
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    color: abstracts.$color-white;
+    background-color: rgb(2, 70, 61);
+
+    &:active,
+    &:focus {
+      border-color: transparent;
+      outline-style: outset;
+      outline-offset: 0px;
+      outline-width: 1px;
+      outline-color: #5eead4;
+      background-color: lighten(rgb(2, 70, 61), 5%);
+    }
+  }
+
+  &__textarea {
+    resize: none;
+    padding: 0.6rem 1.2rem;
+    height: 100%;
+    border: 1px solid #5eead4;
+    border-radius: 4px;
+
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    color: abstracts.$color-white;
+    background-color: rgb(2, 70, 61);
+
+    &:active,
+    &:focus {
+      border-color: transparent;
+      outline-style: outset;
+      outline-offset: 0px;
+      outline-width: 1px;
+      outline-color: #5eead4;
+      background-color: lighten(rgb(2, 70, 61), 5%);
+    }
+  }
+
+  &__button {
+    grid-area: button;
+    padding: 0.8rem 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: rgb(2, 70, 61);
+    color: abstracts.$color-white;
+
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: lighten(rgb(2, 70, 61), 5%);
+      color: #5eead4;
+    }
+
+    &:active,
+    &:focus {
+      outline-style: outset;
+      outline-offset: 1px;
+      outline-width: 1px;
+      outline-color: #5eead4;
+    }
+  }
+}

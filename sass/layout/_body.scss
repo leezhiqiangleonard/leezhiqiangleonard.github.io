@@ -24,7 +24,8 @@
   }
 
   @include abstracts.respond(tab-port) {
-    padding: 3.2rem;
+    padding: 4.2rem;
+    padding-top: 4.8rem;
   }
 
   @include abstracts.respond(phone) {

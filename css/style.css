@@ -330,10 +330,11 @@ body {
 }
 @media only screen and (max-width: 48em) {
   .body-layout {
-    padding: 3.2rem;
+    padding: 4.2rem;
+    padding-top: 4.8rem;
   }
 }
-@media only screen and (max-width: 26em) {
+@media only screen and (max-width: 30em) {
   .body-layout {
     padding: 2.4rem;
   }
@@ -354,8 +355,23 @@ body {
   line-height: 1.5;
   color: #94a3b8;
 }
+@media only screen and (max-width: 63.9em) {
+  .footer {
+    padding: 0rem;
+  }
+}
 .footer__description {
   width: 80%;
+}
+@media only screen and (max-width: 63.9em) {
+  .footer__description {
+    width: 65%;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .footer__description {
+    width: 100%;
+  }
 }
 .footer__link:link, .footer__link:visited {
   text-decoration: none;
@@ -458,7 +474,7 @@ body {
   border-radius: 4px;
   background-color: rgba(45, 212, 191, 0.1);
 }
-@media only screen and (max-width: 26em) {
+@media only screen and (max-width: 30em) {
   .form {
     padding: 1.6rem;
     display: grid;
@@ -483,7 +499,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-@media only screen and (max-width: 26em) {
+@media only screen and (max-width: 30em) {
   .form__name {
     margin: 0;
   }
@@ -495,7 +511,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-@media only screen and (max-width: 26em) {
+@media only screen and (max-width: 30em) {
   .form__email {
     margin: 0;
   }

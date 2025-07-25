@@ -37,7 +37,7 @@ body {
   height: 100vh;
   background-color: #0a172a;
 }
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 48em) {
   body {
     padding: 0;
   }
@@ -327,6 +327,16 @@ body {
     grid-template-columns: 1fr;
   }
 }
+@media only screen and (max-width: 48em) {
+  .body-layout {
+    padding: 3.2rem;
+  }
+}
+@media only screen and (max-width: 26em) {
+  .body-layout {
+    padding: 2.4rem;
+  }
+}
 
 .main {
   grid-area: body;
@@ -447,7 +457,7 @@ body {
   border-radius: 4px;
   background-color: rgba(45, 212, 191, 0.1);
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 26em) {
   .form {
     padding: 1.6rem;
     display: grid;
@@ -472,7 +482,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 26em) {
   .form__name {
     margin: 0;
   }
@@ -484,7 +494,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 26em) {
   .form__email {
     margin: 0;
   }

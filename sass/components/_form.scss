@@ -15,6 +15,14 @@
   border-radius: 4px;
   background-color: rgba(45, 212, 191, 0.1);
 
+  @include abstracts.respond(tab-land) {
+    width: 65em;
+  }
+
+  @include abstracts.respond(tab-port) {
+    width: 100%;
+  }
+
   @include abstracts.respond(phone) {
     padding: 1.6rem;
     display: grid;

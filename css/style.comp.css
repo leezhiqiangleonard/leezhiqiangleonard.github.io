@@ -26,17 +26,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 html {
   font-size: 62.5%;
 }
-@media only screen and (max-width: 75em) {
-  html {
-    font-size: 56.25%;
-  }
-}
-@media only screen and (max-width: 56.25em) {
-  html {
-    font-size: 50%;
-  }
-}
-@media only screen and (min-width: 112.5em) {
+@media only screen and (min-width: 90em) {
   html {
     font-size: 75%;
   }
@@ -47,7 +37,7 @@ body {
   height: 100vh;
   background-color: #0a172a;
 }
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 48em) {
   body {
     padding: 0;
   }
@@ -75,7 +65,7 @@ body {
 }
 .heading-primary--main {
   display: inline-block;
-  font-size: 4rem;
+  font-size: 4.2rem;
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0.02em;
@@ -87,58 +77,40 @@ body {
       animation-iteration-count: 3;
       */
 }
-@media only screen and (max-width: 37.5em) {
-  .heading-primary--main {
-    letter-spacing: 1rem;
-    font-family: 5rem;
-  }
-}
 .heading-primary--sub {
   display: block;
   font-size: 1.6rem;
   font-weight: 400;
   animation: moveInRight 1s ease-out;
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 63.9em) {
   .heading-primary--sub {
-    letter-spacing: 0.5rem;
+    font-size: 1.8rem;
   }
 }
 
 .heading-secondary {
-  font-size: 3.5rem;
-  text-transform: uppercase;
-  font-weight: 700;
   display: inline-block;
-  background-image: linear-gradient(to right, #7ed56f, #28b485);
-  -webkit-background-clip: text;
-  color: transparent;
-  letter-spacing: 0.2rem;
-  transition: all 0.2s;
-}
-@media only screen and (max-width: 56.25em) {
-  .heading-secondary {
-    font-size: 3rem;
-  }
-}
-@media only screen and (max-width: 37.5em) {
-  .heading-secondary {
-    font-size: 2.5rem;
-  }
-}
-.heading-secondary:hover {
-  transform: skewY(2deg) skewX(15deg) scale(1.1);
-  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.03em;
 }
 
 .heading-tertiary {
+  width: 20em;
   font-size: 1.4rem;
   font-weight: 400;
   color: #94a3b8;
 }
+@media only screen and (max-width: 63.9em) {
+  .heading-tertiary {
+    font-size: 1.6rem;
+  }
+}
 
 .paragraph {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 .paragraph:not(:last-child) {
   margin-bottom: 2.4rem;
@@ -241,6 +213,13 @@ body {
   display: flex;
   gap: 2.4rem;
 }
+@media only screen and (max-width: 63.9em) {
+  .icon-display {
+    padding: 0;
+    display: flex;
+    gap: 2.4rem;
+  }
+}
 .icon-display__link:link, .icon-display__link:visited {
   color: inherit;
   text-decoration: none;
@@ -260,12 +239,31 @@ body {
   max-height: 100vh;
   width: 100%;
 }
+@media only screen and (max-width: 63.9em) {
+  .header {
+    top: auto;
+    position: relative;
+    padding: 0;
+    justify-content: start;
+    height: 25vh;
+  }
+}
 .header__hero-box {
   padding: 0 2rem;
+}
+@media only screen and (max-width: 63.9em) {
+  .header__hero-box {
+    padding: 0;
+  }
 }
 
 .navigation {
   background-color: transparent;
+}
+@media only screen and (max-width: 63.9em) {
+  .navigation {
+    display: none;
+  }
 }
 .navigation__nav {
   width: 100%;
@@ -310,7 +308,7 @@ body {
 }
 
 .body-layout {
-  margin: 0 24rem;
+  margin: 0 auto;
   padding: 0 3.2rem;
   position: relative;
   display: grid;
@@ -318,6 +316,37 @@ body {
   grid-template-rows: 1fr;
   grid-template-columns: 4fr 5fr;
   gap: 1rem;
+  max-width: 128rem;
+}
+@media only screen and (max-width: 63.9em) {
+  .body-layout {
+    padding: 4.8rem;
+    position: relative;
+    display: grid;
+    grid-template-areas: "hero" "body";
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 48em) {
+  .body-layout {
+    padding: 4.2rem;
+    padding-top: 4.8rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .body-layout {
+    padding: 2.8rem;
+    padding-top: 4.8rem;
+    padding-bottom: 0rem;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .body-layout {
+    padding: 2.4rem;
+    padding-top: 4.8rem;
+    padding-bottom: 0rem;
+  }
 }
 
 .main {
@@ -335,8 +364,23 @@ body {
   line-height: 1.5;
   color: #94a3b8;
 }
+@media only screen and (max-width: 63.9em) {
+  .footer {
+    padding: 0rem;
+  }
+}
 .footer__description {
   width: 80%;
+}
+@media only screen and (max-width: 63.9em) {
+  .footer__description {
+    width: 65%;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .footer__description {
+    width: 100%;
+  }
 }
 .footer__link:link, .footer__link:visited {
   text-decoration: none;
@@ -359,6 +403,19 @@ body {
   transition: opacity 0.2s ease, background-color 0.2s, color 0.2s;
   cursor: pointer;
 }
+.card:hover {
+  background-color: rgba(160, 180, 209, 0.1);
+  color: #5eead4;
+}
+@media only screen and (max-width: 63.9em) {
+  .card {
+    padding: 0;
+  }
+  .card:hover {
+    background-color: transparent;
+    color: #5eead4;
+  }
+}
 .card__link:link, .card__link:visited {
   text-decoration: none;
   color: inherit;
@@ -370,11 +427,49 @@ body {
   gap: 1.6rem;
   width: 100%;
 }
+@media only screen and (max-width: 37.5em) {
+  .card__layout {
+    display: grid;
+    grid-template-areas: "header" "body";
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+    width: 100%;
+  }
+}
+.card__layout-image {
+  display: grid;
+  grid-template-areas: "header header body body body body body body";
+  grid-template-columns: repeat(8, 1fr);
+  gap: 1.6rem;
+  width: 100%;
+}
+@media only screen and (max-width: 37.5em) {
+  .card__layout-image {
+    display: grid;
+    grid-template-areas: "body" "header";
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    width: 100%;
+  }
+}
 .card__header {
   grid-area: header;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 500;
   color: #94a3b8;
+}
+.card__header-image {
+  grid-area: header;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #94a3b8;
+}
+@media only screen and (max-width: 37.5em) {
+  .card__header-image {
+    width: 16rem;
+  }
 }
 .card__info {
   grid-area: body;
@@ -386,7 +481,7 @@ body {
   font-weight: 500;
 }
 .card__description {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #94a3b8;
 }
 .card__tags {
@@ -409,12 +504,8 @@ body {
   height: 8rem;
   width: 100%;
   border: 1.4px solid #eee;
-  border-radius: 7px;
+  border-radius: 5px;
   object-fit: cover;
-}
-.card:hover {
-  background-color: rgba(160, 180, 209, 0.1);
-  color: #5eead4;
 }
 
 .card.de-selected {
@@ -429,6 +520,25 @@ body {
   grid-template-areas: "header header" "name email" "subject subject" "message message" "button button";
   border-radius: 4px;
   background-color: rgba(45, 212, 191, 0.1);
+}
+@media only screen and (max-width: 63.9em) {
+  .form {
+    width: 65em;
+  }
+}
+@media only screen and (max-width: 48em) {
+  .form {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .form {
+    padding: 1.6rem;
+    display: grid;
+    grid-template-rows: auto 1fr 1fr 1fr 3fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "name" "email" "subject" "message" "button";
+  }
 }
 .form__header {
   grid-area: header;
@@ -446,12 +556,22 @@ body {
   display: flex;
   flex-direction: column;
 }
+@media only screen and (max-width: 30em) {
+  .form__name {
+    margin: 0;
+  }
+}
 .form__email {
   grid-area: email;
   margin-bottom: 1rem;
   margin-left: 0.5rem;
   display: flex;
   flex-direction: column;
+}
+@media only screen and (max-width: 30em) {
+  .form__email {
+    margin: 0;
+  }
 }
 .form__subject {
   grid-area: subject;
@@ -537,6 +657,11 @@ body {
   height: max-content;
   color: #94a3b8;
 }
+@media only screen and (max-width: 63.9em) {
+  .section-about {
+    padding: 0;
+  }
+}
 
 .section-experience {
   height: max-content;
@@ -561,6 +686,27 @@ body {
   padding: 0 2rem;
   height: max-content;
   color: #94a3b8;
+}
+@media only screen and (max-width: 63.9em) {
+  .section-contact {
+    padding: 0;
+  }
+}
+
+.section__header {
+  display: none;
+}
+@media only screen and (max-width: 63.9em) {
+  .section__header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    height: 6rem;
+    align-items: center;
+    background-color: rgba(10, 23, 42, 0.8);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+  }
 }
 
 /*# sourceMappingURL=style.comp.css.map */

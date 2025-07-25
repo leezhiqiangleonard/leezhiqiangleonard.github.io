@@ -31,9 +31,11 @@
   @include abstracts.respond(phone-land) {
     padding: 2.8rem;
     padding-top: 4.8rem;
+    padding-bottom: 0rem;
   }
 
   @include abstracts.respond(phone) {
     padding: 2.4rem;
+    padding-bottom: 0rem;
   }
 }

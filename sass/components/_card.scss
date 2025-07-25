@@ -37,11 +37,22 @@
     grid-template-columns: repeat(8, 1fr);
     gap: 1.6rem;
     width: 100%;
+
+    @include abstracts.respond(phone-land) {
+      display: grid;
+      grid-template-areas:
+        "header"
+        "body";
+      grid-template-rows: auto 1fr;
+      grid-template-columns: 1fr;
+      gap: 0.4rem;
+      width: 100%;
+    }
   }
 
   &__header {
     grid-area: header;
-    font-size: 1.2rem;
+    font-size: abstracts.$short-font-size;
     font-weight: 500;
     color: abstracts.$color-grey-light-3;
   }
@@ -53,12 +64,12 @@
   }
 
   &__heading {
-    font-size: 1.4rem;
+    font-size: abstracts.$short-font-size;
     font-weight: 500;
   }
 
   &__description {
-    font-size: 1.2rem;
+    font-size: abstracts.$short-font-size;
     color: abstracts.$color-grey-light-3;
   }
 
